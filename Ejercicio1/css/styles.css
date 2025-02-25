@@ -64,7 +64,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff4f75; /* Cambia el color a un rosa más oscuro cuando se pasa el ratón */
+    background-color: #ff4f75; /* Cambia el color cuando se pasa el ratón */
 }
 
 /* Enlace para regresar */
