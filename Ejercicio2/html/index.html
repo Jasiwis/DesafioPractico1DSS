@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body class="bg-info d-flex align-items-center justify-content-center vh-100"> 
+
+    <div class="container d-flex justify-content-center">
+        <div class="card border-0 shadow-lg rounded-3 p-4" style="background: linear-gradient(135deg, #f0f8ff, #e0f7fa); max-width: 400px;"> 
+            <div class="card-body">
+                <h2 class="text-center text-primary mb-4">Formulario de Compra</h2> 
+                <form action="../php/procesar.php" method="post"> <!-- Formulario que envía datos al archivo PHP 'procesar.php' -->
+                    <div class="mb-3"> <!-- Campo para el nombre del cliente -->
+                        <label for="nombre" class="form-label">Nombre del Cliente:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control border-0 rounded-pill shadow-sm" required> <!-- Campo de texto para el nombre -->
+                    </div>
+
+                    <div class="mb-3"> <!-- Campo para el precio del producto -->
+                        <label for="precio" class="form-label">Precio del Producto ($):</label>
+                        <input type="number" id="precio" name="precio" class="form-control border-0 rounded-pill shadow-sm" step="0.01" min="0.01" required> <!-- Campo de número para el precio -->
+                    </div>
+
+                    <div class="mb-3"> <!-- Campo para la cantidad del producto -->
+                        <label for="cantidad" class="form-label">Cantidad de Producto:</label>
+                        <input type="number" id="cantidad" name="cantidad" class="form-control border-0 rounded-pill shadow-sm" min="1" required> <!-- Campo de número para la cantidad -->
+                    </div>
+
+                    <div class="mb-3"> <!-- Campo para el pago del cliente -->
+                        <label for="pago" class="form-label">Pago del Cliente ($):</label>
+                        <input type="number" id="pago" name="pago" class="form-control border-0 rounded-pill shadow-sm" step="0.01" min="0.01" required> <!-- Campo de número para el pago -->
+                    </div>
+
+                    <div class="d-grid"> <!-- Contenedor para el botón -->
+                        <button type="submit" class="btn btn-warning text-white py-2 rounded-pill">Procesar Compra</button> <!-- Botón para enviar el formulario -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Script de Bootstrap para funcionalidades interactivas -->
+</body>
+</html>
